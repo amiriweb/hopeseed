@@ -34,7 +34,7 @@ To set up the project on your local machine, follow these steps:
 1. **Clone the repository**:
 
 ```bash
-  git clone https://github.com/your-username/environmental-business-dashboard.git
+  git clone [https://github.com/amiriweb/hopeseed.git]
 ```
 
 2. **Navigate into the project directory:**:
