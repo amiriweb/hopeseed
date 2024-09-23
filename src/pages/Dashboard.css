@@ -1,0 +1,116 @@
+/* Container for the entire dashboard grid */
+.dashboard__grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Two columns: 1fr for business metrics, 2fr for chart and environmental data */
+  grid-gap: 10px; /* Reduced gap between columns */
+  padding: 20px; /* Outer padding for the entire grid */
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start; /* Align grid items to the top */
+}
+
+/* Business Metrics Section */
+.dashboard__business-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Reduced gap between business metric cards */
+  grid-column: 1 / 2; /* Business metrics on the left */
+  grid-row: 1 / span 2; /* Business metrics span two rows */
+  padding: 0; /* Remove unnecessary padding */
+}
+
+/* Environmental Data Section */
+.dashboard__environmental-data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Reduced gap between environmental metric cards */
+  grid-column: 1 / 2; /* Environmental data aligned under the business metrics */
+  grid-row: 3 / 5; /* Environmental data spans rows */
+  padding: 0; /* Remove unnecessary padding */
+  margin-top: -168px;
+}
+
+/* Chart Section */
+.dashboard__chart {
+  grid-column: 2 / 3; /* Chart spans the second column */
+  grid-row: 1 / 3; /* Chart spans two rows */
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-height: 500px;
+}
+
+/* Messages Section */
+.dashboard__messages {
+  grid-column: 2 / 3; /* Messages span the second column */
+  grid-row: 3 / 4; /* Place messages under the chart */
+  margin-top: 10px; /* Adjust margin between chart and messages */
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+/* Chart section styling */
+.chart-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns for the charts */
+  grid-template-rows: auto auto; /* 2 rows for the charts */
+  grid-gap: 20px; /* Gap between charts */
+  justify-items: center; /* Center the charts horizontally */
+}
+
+/* Each chart container */
+.chart-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Full width inside grid */
+  max-width: 400px; /* Adjust max width for smaller size */
+  height: 250px; /* Fixed height for smaller charts */
+}
+
+/* KPI Container */
+.dashboard__business-metrics {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px; /* Consistent spacing between KPIs */
+}
+
+.business-metric-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect for KPIs */
+.business-metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* KPI Icons */
+.kpi-icon {
+  margin-right: 10px;
+  font-size: 1.5rem; /* Example size for icons */
+  color: var(--kpi-icon-color); /* Use a color that fits the design */
+}
+
+.kpi-value {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.kpi-label {
+  font-size: 1rem;
+  color: #666;
+}

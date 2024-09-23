@@ -1,0 +1,65 @@
+/* src/components/BusinessMetricCard.css */
+
+/* General card styling */
+.metric-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: "Roboto", sans-serif;
+  min-width: 150px;
+}
+
+.metric-card--positive {
+  border-left: 4px solid #66bb6a; /* Green accent for positive values */
+}
+
+.metric-card--negative {
+  border-left: 4px solid #ef5350; /* Red accent for negative values */
+}
+
+.metric-card__content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.metric-card__info {
+  flex-grow: 1;
+}
+
+.metric-card__title {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 0;
+  color: #6b6b6b;
+}
+
+.metric-card__value {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #333;
+}
+
+.metric-card__change {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.metric-card__change-icon--positive {
+  color: #66bb6a; /* Soft green for positive change */
+}
+
+.metric-card__change-icon--negative {
+  color: #ef5350; /* Soft red for negative change */
+}
+
+.metric-card__change-icon {
+  font-size: 1.2rem;
+  margin-right: 5px;
+}

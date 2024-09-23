@@ -1,0 +1,95 @@
+/* src/components/EnvironmentalDataCard.css */
+
+/* Main container for the environmental data card */
+.environmental-card {
+  background-color: #fff; /* White background */
+  border-radius: 10px; /* Smooth rounded corners */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft shadow */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Content container inside the card */
+.environmental-card__content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Label styling (e.g., "Temp", "Humidity") */
+.environmental-card__label h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+/* Current small text */
+.environmental-card__label p {
+  font-size: 0.85rem;
+  color: #999;
+  margin: 5px 0 0;
+}
+
+/* Value styling */
+.environmental-card__value {
+  text-align: right;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #38b6ff; /* Soft green for positive values */
+}
+
+/* Adjust color based on value */
+.environmental-card__value span {
+  color: #43e97b; /* Example for positive value */
+}
+
+.environmental-card__value span:nth-child(2) {
+  font-size: 1rem; /* Unit size smaller than value */
+  color: #666;
+}
+
+/* Container for environmental data */
+.environmental-data-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Wrapper for each environmental card */
+.environmental-card-wrapper {
+  max-height: 100px; /* Set the max height for fully visible cards */
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth height and opacity transition */
+  opacity: 1;
+}
+
+/* Hidden state for environmental cards (when showMore is false) */
+.environmental-card-wrapper.hidden {
+  max-height: 0; /* Collapse the card */
+  opacity: 0; /* Fade out */
+  visibility: hidden; /* Hide the card */
+  margin: 0; /* Remove margin when hidden */
+  padding: 0; /* Remove padding when hidden */
+  overflow: hidden;
+}
+
+/* Button styling for Show More/Show Less */
+.show-more-button {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.show-more-button:hover {
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}

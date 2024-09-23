@@ -1,0 +1,36 @@
+/* src/components/Notification.css */
+
+.notification-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #ff3b30; /* Red background for critical alerts */
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  z-index: 1000;
+  animation: slide-in 0.5s ease-out, fade-out 5s ease-out forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

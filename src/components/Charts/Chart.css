@@ -1,0 +1,14 @@
+/* Ensure the chart container doesn't grow unexpectedly */
+.chart-container {
+  width: 100%; /* Make the chart take up the full width */
+  height: 400px; /* Set a fixed height */
+  position: relative;
+}
+
+/* Control the inner canvas styling */
+.chart-container canvas {
+  display: block;
+  max-width: 100%;
+  height: 100% !important;
+  width: 100% !important;
+}
